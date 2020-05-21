@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1008556245213",
+    "firebase_url": "https://vara-21be0.firebaseio.com",
+    "project_id": "vara-21be0",
+    "storage_bucket": "vara-21be0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008556245213:android:dc6f229ead181c95509b34",
+        "android_client_info": {
+          "package_name": "com.demoapp.vara"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008556245213-9du6vabfc2bhdhcq5ol0hoj883v4hmgu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-agi1g88pPGAeK8A8KeqY9J31k9zUNEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008556245213-9du6vabfc2bhdhcq5ol0hoj883v4hmgu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
