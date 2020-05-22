@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Register">
 
     <LinearLayout
         android:id="@+id/ll_main_layout"
@@ -20,7 +20,7 @@
             android:textSize="25sp"
             android:textColor="#6dffbf"
             android:padding="30dp"
-            android:text="@string/login"/>
+            android:text="@string/signup"/>
 
         <EditText
             android:id="@+id/emailTxt"
@@ -42,28 +42,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:importantForAutofill="no" />
-        <LinearLayout
+        <EditText
+            android:id="@+id/nameTxt"
+            android:hint="@string/Name"
+            android:textColor="#6bfff7"
+            android:textColorHint="#52afaa"
+            android:textAlignment="center"
+            android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="25dp"
-            android:orientation="horizontal">
+            android:importantForAutofill="no" />
 
-            <TextView
-                android:id="@+id/regTxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#73AF2C"
-                android:text="@string/register"
-                android:textAllCaps="false" />
-
-            <Button
-                android:id="@+id/loginBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="LogIn"
-                android:textAllCaps="false" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/regBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SignUp"
+            android:textAllCaps="false" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
