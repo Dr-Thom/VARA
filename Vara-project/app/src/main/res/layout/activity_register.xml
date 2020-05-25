@@ -32,6 +32,7 @@
             android:textColorHint="#52afaa"
             android:importantForAutofill="no"
             android:inputType="" />
+
         <EditText
             android:id="@+id/passwordTxt"
             android:hint="@string/password"
@@ -42,13 +43,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:importantForAutofill="no" />
+
         <EditText
             android:id="@+id/nameTxt"
-            android:hint="@string/Name"
+            android:hint="Name"
             android:textColor="#6bfff7"
             android:textColorHint="#52afaa"
             android:textAlignment="center"
-            android:inputType="textPassword"
+            android:inputType=""
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:importantForAutofill="no" />

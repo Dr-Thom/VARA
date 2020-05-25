@@ -43,7 +43,7 @@ class Register : AppCompatActivity() {
                     mDatabase.child(uid).child("Names").setValue(name)
                     Toast.makeText(this, "Sucessfully signed in ", Toast.LENGTH_LONG).show()
                 }else{
-                    Toast.makeText(this, "Error", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Please enter valid value", Toast.LENGTH_LONG).show()
                 }
             })
          }else{

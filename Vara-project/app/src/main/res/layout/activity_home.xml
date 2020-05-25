@@ -4,32 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
-    <menu
-        tools:ignore="MissingConstraints">
-        <item
-            android:id="@+id/signOut"
-            android:orderInCategory="200"
-            android:title="@string/signout"
-            app:showAsAction="never" />
-    </menu>
+    tools:context=".Home"
+    >
+
     <LinearLayout
         android:id="@+id/ll_main_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:background="#444444"
+        android:orientation="vertical"
         android:padding="25dp"
-        android:orientation="vertical">
+        android:background="@drawable/logo3"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="78dp">
 
         <TextView
             android:id="@+id/dispTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="30dp"
-            android:text=""
-            android:textColor="#FFEB3B"
-            android:textSize="25sp" />
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="76dp"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.305" />
 
     </LinearLayout>
 

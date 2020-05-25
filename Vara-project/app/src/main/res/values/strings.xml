@@ -9,4 +9,6 @@
     <string name="Welcome" />
     <string name="Name" />
     <string name="signout" />
+    <string name="add_api_id">ca-app-pub-9220432525424100~7757943311</string
+    <string name="add_video_id">ca-app-pub-9220432525424100/4515034004</string>
 </resources>
