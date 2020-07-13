@@ -4,63 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#090808"
     tools:context=".Register">
 
-    <LinearLayout
-        android:id="@+id/ll_main_layout"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="437dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="635dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="636dp"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:text="@string/signup"
+        android:textAlignment="center"
+        android:textColor="#E72EBE"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/emailTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/nameTxt"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:background="#444444"
-        android:padding="25dp"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:textColor="#6dffbf"
-            android:padding="30dp"
-            android:text="@string/signup"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        android:hint="Name"
+        android:importantForAutofill="no"
+        android:inputType=""
+        android:textAlignment="center"
+        android:textColor="#6bfff7"
+        android:textColorHint="#52afaa"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/emailTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-        <EditText
-            android:id="@+id/emailTxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/email"
-            android:textAlignment="center"
-            android:textColor="#6bfff7"
-            android:textColorHint="#52afaa"
-            android:importantForAutofill="no"
-            android:inputType="" />
+    <EditText
+        android:id="@+id/emailTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:hint="@string/email"
+        android:importantForAutofill="no"
+        android:inputType=""
+        android:textAlignment="center"
+        android:textColor="#6bfff7"
+        android:textColorHint="#52afaa"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTxt" />
 
-        <EditText
-            android:id="@+id/passwordTxt"
-            android:hint="@string/password"
-            android:textColor="#6bfff7"
-            android:textColorHint="#52afaa"
-            android:textAlignment="center"
-            android:inputType="textPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:importantForAutofill="no" />
 
-        <EditText
-            android:id="@+id/nameTxt"
-            android:hint="Name"
-            android:textColor="#6bfff7"
-            android:textColorHint="#52afaa"
-            android:textAlignment="center"
-            android:inputType=""
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:importantForAutofill="no" />
+    <EditText
+        android:id="@+id/passwordTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="#6bfff7"
+        android:textColorHint="#52afaa"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/regBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailTxt" />
 
-        <Button
-            android:id="@+id/regBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SignUp"
-            android:textAllCaps="false" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/regBtn"
+        android:layout_width="292dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="254dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="254dp"
+        android:layout_marginBottom="120dp"
+        android:background="#E72EBE"
+        android:fontFamily="serif"
+        android:text="SignUp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTxt" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

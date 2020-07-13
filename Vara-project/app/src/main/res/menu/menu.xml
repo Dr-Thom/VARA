@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Help"
+        app:showAsAction="never"></item>
+    <item android:title="Wallet"
+        app:showAsAction="never"></item>
+    <item android:title="Setting"
+        app:showAsAction="never"></item>
     <item android:title="SignOut"
         android:id="@+id/signOut"
         app:showAsAction="never"></item>

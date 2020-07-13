@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9220432525424100~3672725629"/>
         <activity android:name=".Home"></activity>
         <activity android:name=".Register" />
         <activity android:name=".MainActivity">

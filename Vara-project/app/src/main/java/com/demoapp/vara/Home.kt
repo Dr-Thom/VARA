@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.activity_home.*
 
 class Home : AppCompatActivity() {
     lateinit var mDatabase : DatabaseReference
@@ -52,6 +53,5 @@ class Home : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-
 
 }

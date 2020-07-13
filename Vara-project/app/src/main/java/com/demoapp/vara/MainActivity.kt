@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
         loginBtn.setOnClickListener(View.OnClickListener {
             view -> login()
         })
-
         regTxt.setOnClickListener(View.OnClickListener {
             View -> register()
         })
@@ -42,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 task ->
                 if (task.isSuccessful){
                     startActivity(Intent(this, Home :: class.java))
-                    Toast.makeText(this, "Suceesfully logged in:)", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Succesfully logged in:)", Toast.LENGTH_LONG).show()
                 } else{
                     Toast.makeText(this, "Error ;(", Toast.LENGTH_LONG).show()
                 }
