@@ -8,6 +8,10 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.InterstitialAd
+import com.google.android.gms.ads.MobileAds
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_home.*
@@ -16,6 +20,7 @@ class Home : AppCompatActivity() {
     lateinit var mDatabase : DatabaseReference
     var mAuth = FirebaseAuth.getInstance()
     var user = FirebaseAuth.getInstance().currentUser
+    private lateinit var mInterstitialAd: InterstitialAd
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +29,19 @@ class Home : AppCompatActivity() {
         val nameTxt = findViewById<View>(R.id.dispTxt) as TextView
 
         var uid = user!!.uid
+
+        MobileAds.initialize(this,getString(R.string.admob_app_id))
+
+        mInterstitialAd = InterstitialAd(this)
+        mInterstitialAd.adUnitId = getString(R.string.interstrial_add_id)
+        mInterstitialAd.loadAd(AdRequest.Builder().build())
+
+        mInterstitialAd.adListener = object: AdListener(){
+            override fun onAdLoaded() {
+                mInterstitialAd.show()
+                super.onAdLoaded()
+            }
+        }
 
         mDatabase = FirebaseDatabase.getInstance().getReference("Names")
 
