@@ -30,7 +30,7 @@ class Home : AppCompatActivity() {
 
         val timer = Timer()
         timer.schedule(timerTask {
-            nextScreen()  }, 30000)
+            nextScreen()  }, 10000)
 
         val nameTxt = findViewById<View>(R.id.dispTxt) as TextView
 
