@@ -9,6 +9,6 @@
     <string name="Welcome" />
     <string name="Name" />
     <string name="signOut" />
-    <string name="add_api_id">ca-app-pub-9220432525424100~7757943311</string>
-    <string name="add_video_id">ca-app-pub-9220432525424100/4515034004</string>
+    <string name="admob_app_id">ca-app-pub-9220432525424100~3672725629</string>
+    <string name="interstrial_add_id">ca-app-pub-3940256099942544/8691691433</string>
 </resources>
