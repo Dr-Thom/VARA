@@ -15,33 +15,26 @@ import com.google.android.gms.ads.MobileAds
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_home.*
+import java.util.*
+import kotlin.concurrent.timerTask
 
 class Home : AppCompatActivity() {
-    lateinit var mDatabase : DatabaseReference
-    var mAuth = FirebaseAuth.getInstance()
+    private lateinit var mDatabase : DatabaseReference
+    private var mAuth = FirebaseAuth.getInstance()
     var user = FirebaseAuth.getInstance().currentUser
-    private lateinit var mInterstitialAd: InterstitialAd
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        val timer = Timer()
+        timer.schedule(timerTask {
+            nextScreen()  }, 30000)
+
         val nameTxt = findViewById<View>(R.id.dispTxt) as TextView
 
         var uid = user!!.uid
-
-        MobileAds.initialize(this,getString(R.string.admob_app_id))
-
-        mInterstitialAd = InterstitialAd(this)
-        mInterstitialAd.adUnitId = getString(R.string.interstrial_add_id)
-        mInterstitialAd.loadAd(AdRequest.Builder().build())
-
-        mInterstitialAd.adListener = object: AdListener(){
-            override fun onAdLoaded() {
-                mInterstitialAd.show()
-                super.onAdLoaded()
-            }
-        }
 
         mDatabase = FirebaseDatabase.getInstance().getReference("Names")
 
@@ -70,6 +63,10 @@ class Home : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun nextScreen(){
+        startActivity(Intent(this, HomeMsg :: class.java))
     }
 
 }
