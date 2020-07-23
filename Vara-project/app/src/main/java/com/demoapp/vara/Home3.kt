@@ -1,30 +1,61 @@
 package com.demoapp.vara
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
 import com.google.android.gms.ads.MobileAds
+import java.util.*
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService
+import java.util.concurrent.TimeUnit
+import kotlin.concurrent.timerTask
 
 class Home3 : AppCompatActivity() {
 
     private lateinit var mInterstitialAd: InterstitialAd
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home3)
-
-        MobileAds.initialize(this,getString(R.string.admob_app_id))
-
-        mInterstitialAd = InterstitialAd(this)
-        mInterstitialAd.adUnitId = getString(R.string.interstrial_add_id)
-        mInterstitialAd.loadAd(AdRequest.Builder().build())
-
-        mInterstitialAd.adListener = object: AdListener(){
-            override fun onAdLoaded() {
-                mInterstitialAd.show()
-                super.onAdLoaded()
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home3);
+        val timer = Timer()
+        timer.schedule(timerTask {
+            nextScreen()  }, 30000)
+        prepareAd();
+        val scheduler = Executors.newSingleThreadScheduledExecutor()
+        scheduler.scheduleAtFixedRate(object:Runnable {
+            public override fun run() {
+                Log.i("hello", "world")
+                runOnUiThread(object:Runnable {
+                    public override fun run() {
+                        if (mInterstitialAd.isLoaded())
+                        {
+                            mInterstitialAd.show()
+                        }
+                        else
+                        {
+                            Log.d("TAG", " Interstitial not loaded")
+                        }
+                        prepareAd()
+                    }
+                })
             }
-        }
+        }, 0, 20, TimeUnit.SECONDS)
     }
+
+
+
+    private fun prepareAd() {
+        mInterstitialAd = InterstitialAd(this)
+        mInterstitialAd.adUnitId = getString(R.string.int_add_id)
+        mInterstitialAd.loadAd(AdRequest.Builder().build())
+    }
+
+    private fun nextScreen(){
+        startActivity(Intent(this, HomeFMsg :: class.java))
+    }
+
 }
