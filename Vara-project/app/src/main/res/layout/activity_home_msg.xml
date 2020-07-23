@@ -9,14 +9,17 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="467dp"
-        android:layout_height="112dp"
+        android:layout_width="336dp"
+        android:layout_height="1414dp"
         android:layout_marginStart="150dp"
         android:layout_marginTop="425dp"
         android:layout_marginEnd="183dp"
         android:layout_marginBottom="743dp"
         android:padding="5dp"
-        android:text="Welcome Message"
+        android:text="Welcome, this platform is brought to you on behalf of your Lyft driver.
+        In order tp keep fares down but at the same time assist your drivers with a better income for sharing their car, they have authorized the presentation of this programing and promotional material.
+        Additional promotinal discounts & coupons for more savings, will be presented to you at the end of your trip.
+        Thank you for your participation, the VARA team"
         android:textAlignment="center"
         android:textColor="#E72EBE"
         android:textSize="36sp"
