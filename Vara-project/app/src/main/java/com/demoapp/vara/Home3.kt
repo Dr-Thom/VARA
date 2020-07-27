@@ -23,34 +23,45 @@ class Home3 : AppCompatActivity() {
         setContentView(R.layout.activity_home3);
 
 
-        MobileAds.initialize(this) {}
-        val timer = Timer()
-        timer.schedule(timerTask {
-            nextScreen()  }, 60000)
-        prepareAd();
-
-
-        val scheduler = Executors.newSingleThreadScheduledExecutor()
-        scheduler.scheduleAtFixedRate({
-          // Log.i("hello", "world")
-            runOnUiThread {
-                if (mInterstitialAd.isLoaded) {
-                    mInterstitialAd.show()
-                } else {
-                    Log.d("TAG", " Interstitial not loaded")
-                }
-                prepareAd()
-            }
-        }, 5, 20, TimeUnit.SECONDS)
-    }
-
-
-
-    private fun prepareAd() {
+        MobileAds.initialize(this,getString(R.string.ad_app_id))
         mInterstitialAd = InterstitialAd(this);
         mInterstitialAd.adUnitId= getString(R.string.int_add_id)
         mInterstitialAd.loadAd(AdRequest.Builder().build());
-    }
+
+        mInterstitialAd.adListener =object:AdListener() {
+            override fun onAdLoaded() {
+                    mInterstitialAd.show()
+                    super.onAdLoaded()
+            }
+        }
+
+        val timer = Timer()
+        timer.schedule(timerTask {
+            nextScreen()  }, 35000)
+//        prepareAd();
+
+
+//        val scheduler = Executors.newSingleThreadScheduledExecutor()
+//        scheduler.scheduleAtFixedRate({
+//          // Log.i("hello", "world")
+//            runOnUiThread {
+//                if (mInterstitialAd.isLoaded) {
+//                    mInterstitialAd.show()
+//                } else {
+//                    Log.d("TAG", " Interstitial not loaded")
+//                }
+//                prepareAd()
+//            }
+//        }, 5, 20, TimeUnit.SECONDS)
+  }
+
+
+
+//    private fun prepareAd() {
+//        mInterstitialAd = InterstitialAd(this);
+//        mInterstitialAd.adUnitId= getString(R.string.int_add_id)
+//        mInterstitialAd.loadAd(AdRequest.Builder().build());
+//    }
 
     private fun nextScreen(){
         startActivity(Intent(this, HomeFMsg :: class.java))

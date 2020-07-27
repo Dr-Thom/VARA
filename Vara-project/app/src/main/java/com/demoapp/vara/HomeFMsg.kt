@@ -13,7 +13,7 @@ class HomeFMsg : AppCompatActivity() {
 
         val timer = Timer()
         timer.schedule(timerTask {
-            nextScreen()  }, 30000)
+            nextScreen()  }, 15000)
     }
 
     private fun nextScreen(){
