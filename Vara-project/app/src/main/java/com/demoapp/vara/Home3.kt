@@ -21,37 +21,35 @@ class Home3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home3);
+
+
+        MobileAds.initialize(this) {}
         val timer = Timer()
         timer.schedule(timerTask {
-            nextScreen()  }, 30000)
+            nextScreen()  }, 60000)
         prepareAd();
+
+
         val scheduler = Executors.newSingleThreadScheduledExecutor()
-        scheduler.scheduleAtFixedRate(object:Runnable {
-            public override fun run() {
-                Log.i("hello", "world")
-                runOnUiThread(object:Runnable {
-                    public override fun run() {
-                        if (mInterstitialAd.isLoaded())
-                        {
-                            mInterstitialAd.show()
-                        }
-                        else
-                        {
-                            Log.d("TAG", " Interstitial not loaded")
-                        }
-                        prepareAd()
-                    }
-                })
+        scheduler.scheduleAtFixedRate({
+          // Log.i("hello", "world")
+            runOnUiThread {
+                if (mInterstitialAd.isLoaded) {
+                    mInterstitialAd.show()
+                } else {
+                    Log.d("TAG", " Interstitial not loaded")
+                }
+                prepareAd()
             }
-        }, 0, 20, TimeUnit.SECONDS)
+        }, 5, 20, TimeUnit.SECONDS)
     }
 
 
 
     private fun prepareAd() {
-        mInterstitialAd = InterstitialAd(this)
-        mInterstitialAd.adUnitId = getString(R.string.int_add_id)
-        mInterstitialAd.loadAd(AdRequest.Builder().build())
+        mInterstitialAd = InterstitialAd(this);
+        mInterstitialAd.adUnitId= getString(R.string.int_add_id)
+        mInterstitialAd.loadAd(AdRequest.Builder().build());
     }
 
     private fun nextScreen(){
