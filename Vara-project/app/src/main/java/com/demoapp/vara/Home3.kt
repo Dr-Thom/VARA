@@ -22,35 +22,36 @@ class Home3 : AppCompatActivity() {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home3);
 
-
-        MobileAds.initialize(this) {}
+        prepareAd();
+//        MobileAds.initialize(this) {}
+//        mInterstitialAd = InterstitialAd(this);
+//        mInterstitialAd.adUnitId= getString(R.string.int_add_id)
+//        mInterstitialAd.loadAd(AdRequest.Builder().build());
+        mInterstitialAd.show();
         val timer = Timer()
         timer.schedule(timerTask {
-            nextScreen()  }, 60000)
-        prepareAd();
-
-
-        val scheduler = Executors.newSingleThreadScheduledExecutor()
-        scheduler.scheduleAtFixedRate({
-          // Log.i("hello", "world")
-            runOnUiThread {
-                if (mInterstitialAd.isLoaded) {
-                    mInterstitialAd.show()
-                } else {
-                    Log.d("TAG", " Interstitial not loaded")
-                }
-                prepareAd()
-            }
-        }, 5, 20, TimeUnit.SECONDS)
+            nextScreen()  }, 30000)
+//
+//        val scheduler = Executors.newSingleThreadScheduledExecutor()
+//        scheduler.scheduleAtFixedRate({
+//          // Log.i("hello", "world")
+//            runOnUiThread {
+//                if (mInterstitialAd.isLoaded) {
+//                    mInterstitialAd.show()
+//                } else {
+//                    Log.d("TAG", " Interstitial not loaded")
+//                }
+//                prepareAd()
+//            }
+//        }, 5, 20, TimeUnit.SECONDS)
     }
 
 
-
-    private fun prepareAd() {
-        mInterstitialAd = InterstitialAd(this);
+     private fun prepareAd() {
+         mInterstitialAd = InterstitialAd(this);
         mInterstitialAd.adUnitId= getString(R.string.int_add_id)
-        mInterstitialAd.loadAd(AdRequest.Builder().build());
-    }
+       mInterstitialAd.loadAd(AdRequest.Builder().build());
+     }
 
     private fun nextScreen(){
         startActivity(Intent(this, HomeFMsg :: class.java))
