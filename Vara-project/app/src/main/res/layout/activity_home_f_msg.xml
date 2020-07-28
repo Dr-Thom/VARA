@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     android:background="#090808"
     tools:context=".HomeFMsg">
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="467dp"
-        android:layout_height="112dp"
+        android:layout_width="516dp"
+        android:layout_height="115dp"
         android:layout_marginStart="150dp"
         android:layout_marginTop="425dp"
         android:layout_marginEnd="183dp"
