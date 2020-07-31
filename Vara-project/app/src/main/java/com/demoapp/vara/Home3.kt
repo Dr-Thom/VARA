@@ -23,17 +23,17 @@ class Home3 : AppCompatActivity() {
         setContentView(R.layout.activity_home3);
 
 
-        MobileAds.initialize(this,getString(R.string.ad_app_id))
-        mInterstitialAd = InterstitialAd(this);
-        mInterstitialAd.adUnitId= getString(R.string.int_add_id)
-        mInterstitialAd.loadAd(AdRequest.Builder().build());
-
-        mInterstitialAd.adListener =object:AdListener() {
-            override fun onAdLoaded() {
-                    mInterstitialAd.show()
-                    super.onAdLoaded()
-            }
-        }
+//        MobileAds.initialize(this,getString(R.string.ad_app_id))
+//        mInterstitialAd = InterstitialAd(this);
+//        mInterstitialAd.adUnitId= getString(R.string.int_add_id)
+//        mInterstitialAd.loadAd(AdRequest.Builder().build());
+//
+//        mInterstitialAd.adListener =object:AdListener() {
+//            override fun onAdLoaded() {
+//                    mInterstitialAd.show()
+//                    super.onAdLoaded()
+//            }
+//        }
 
         val timer = Timer()
         timer.schedule(timerTask {

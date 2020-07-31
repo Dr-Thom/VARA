@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1008556245213-v51stl395q9c1l079ahnbmdcq6m4hsu0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.demoapp.vara",
+            "certificate_hash": "5eac2ad2fe5249b910b804bd8774c34c635afc0e"
+          }
+        },
+        {
           "client_id": "1008556245213-9du6vabfc2bhdhcq5ol0hoj883v4hmgu.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -33,7 +41,8 @@
             }
           ]
         }
-      }
+      },
+      "admob_app_id": "ca-app-pub-9220432525424100~3672725629"
     }
   ],
   "configuration_version": "1"
