@@ -22,7 +22,6 @@ class Home3 : AppCompatActivity() {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home3);
 
-
         MobileAds.initialize(this,getString(R.string.ad_app_id))
         mInterstitialAd = InterstitialAd(this);
         mInterstitialAd.adUnitId= getString(R.string.int_add_id)
@@ -37,8 +36,9 @@ class Home3 : AppCompatActivity() {
 
         val timer = Timer()
         timer.schedule(timerTask {
-            nextScreen()  }, 35000)
+            nextScreen()  }, 60000)
 //        prepareAd();
+
 
 
 //        val scheduler = Executors.newSingleThreadScheduledExecutor()
@@ -53,8 +53,7 @@ class Home3 : AppCompatActivity() {
 //                prepareAd()
 //            }
 //        }, 5, 20, TimeUnit.SECONDS)
-  }
-
+    }
 
 
 //    private fun prepareAd() {
