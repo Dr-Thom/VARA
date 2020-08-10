@@ -8,20 +8,40 @@
     tools:context=".HomeFMsg">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="516dp"
-        android:layout_height="115dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="425dp"
+        android:id="@+id/textViewF"
+        android:layout_width="926dp"
+        android:layout_height="1040dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="183dp"
-        android:layout_marginBottom="743dp"
         android:padding="5dp"
-        android:text="Farewell Message"
+        android:text="Thank you for watching our sponsors and the important info they shared with you, please patronize these sponsors since they are paying to keep fare costs down while giving a better income to your driver, you are entitled to special discounts for participating,  if you would like more information on these special discounts please tap 'YES' on the screen and we'll follow up with an email that includes your personal discounts. If you have any further questions or concerns please email us at service@varaplatform.com"
         android:textAlignment="center"
         android:textColor="#E72EBE"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+<!--  //  <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="790dp"-->
+<!--        android:layout_height="903dp"-->
+<!--        android:layout_marginStart="100dp"-->
+<!--        android:layout_marginTop="100dp"-->
+<!--        android:layout_marginEnd="100dp"-->
+<!--        android:layout_marginBottom="200dp"-->
+<!--        android:padding="5dp"-->
+<!--        android:text="Thank you for watching our sponsors and the important info they shared with you, please patronize these sponsors since they are paying to keep fate costs down while giving a better income to your driver, you are entitled to special discounts for participating,  if you would like more information on these special discounts please tap 'YES' on the screen and we'll follow up with an email that includes your supervisor discount. If you have any further questions or concerns please email us at service@varaplatform.com"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="#E72EBE"-->
+<!--        android:textSize="30sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.126"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.065" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>

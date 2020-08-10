@@ -22,19 +22,6 @@ class Home3 : AppCompatActivity() {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home3);
 
-<<<<<<< HEAD
-        prepareAd();
-//        MobileAds.initialize(this) {}
-//        mInterstitialAd = InterstitialAd(this);
-//        mInterstitialAd.adUnitId= getString(R.string.int_add_id)
-//        mInterstitialAd.loadAd(AdRequest.Builder().build());
-        mInterstitialAd.show();
-        val timer = Timer()
-        timer.schedule(timerTask {
-            nextScreen()  }, 30000)
-//
-=======
-
         MobileAds.initialize(this,getString(R.string.ad_app_id))
         mInterstitialAd = InterstitialAd(this);
         mInterstitialAd.adUnitId= getString(R.string.int_add_id)
@@ -49,11 +36,11 @@ class Home3 : AppCompatActivity() {
 
         val timer = Timer()
         timer.schedule(timerTask {
-            nextScreen()  }, 35000)
+            nextScreen()  }, 60000)
 //        prepareAd();
 
 
->>>>>>> develop
+
 //        val scheduler = Executors.newSingleThreadScheduledExecutor()
 //        scheduler.scheduleAtFixedRate({
 //          // Log.i("hello", "world")
@@ -66,18 +53,7 @@ class Home3 : AppCompatActivity() {
 //                prepareAd()
 //            }
 //        }, 5, 20, TimeUnit.SECONDS)
-<<<<<<< HEAD
     }
-
-
-     private fun prepareAd() {
-         mInterstitialAd = InterstitialAd(this);
-        mInterstitialAd.adUnitId= getString(R.string.int_add_id)
-       mInterstitialAd.loadAd(AdRequest.Builder().build());
-     }
-=======
-  }
-
 
 
 //    private fun prepareAd() {
@@ -85,7 +61,6 @@ class Home3 : AppCompatActivity() {
 //        mInterstitialAd.adUnitId= getString(R.string.int_add_id)
 //        mInterstitialAd.loadAd(AdRequest.Builder().build());
 //    }
->>>>>>> develop
 
     private fun nextScreen(){
         startActivity(Intent(this, HomeFMsg :: class.java))
